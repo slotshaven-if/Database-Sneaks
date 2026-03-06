@@ -29,7 +29,7 @@ SELECT Kunde.Navn, Produkt.Model, Produkt.Mærke, Produkt.Pris, Ordre.Antal
     JOIN Kunde ON Ordre.KundeID = Kunde.KundeID
     JOIN Produkt ON Ordre.ProduktID = Produkt.ProduktID;
 
--- alternativ version med USING fordi felterne har samme i begge tabeller.
+-- alternativ version med USING fordi felterne har samme navn i begge tabeller.
 SELECT Kunde.Navn, Produkt.Model, Produkt.Mærke, Produkt.Pris, Ordre.Antal
     FROM Ordre
     JOIN Kunde USING (KundeID)
